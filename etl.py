@@ -26,5 +26,5 @@ def load(df:pd.DataFrame)-> None:
 data = extract()
 df = transform(data)
 load(df)
-
+print(disk_engine.execute("SELECT * FROM uni WHERE domains='smcc.edu'").fetchall())
 print(df.shape)
